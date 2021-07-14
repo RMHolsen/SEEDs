@@ -16,7 +16,7 @@ class PodsController < ApplicationController
 
     def create 
         pod = Pod.new(pod_params)
-        #byebug
+        # byebug
         if pod.save 
             render json: PodSerializer.new(pod)
         else 

@@ -73,6 +73,17 @@ a:visited {
     margin: 0 auto;
 }
 
+/* #header {
+
+} */
+
+#header-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 385px;    
+}
+
 /* IN CASE EACH INDIVIDUAL COLUMN NEEDS STYLING 
 
 #pods-container {

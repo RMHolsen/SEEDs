@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SEEDs</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="plants.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <!-- Script tag may also go into the body of the html file -->
+        <!-- Note: js files loaded on the same page cannot overlap variable declarations. can't have two test functions in js files on the same page -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="test-container">
+            
+        </div>
+
+        <!-- NEW PLANT FORM -->
+        <div id="new-plant-container">
+            <form id="create-plant-form">
+                <p><strong>Common Name: </strong><input id="input-name" type="text" name="name" value="" placeholder="Common name"></p>
+                <p><strong>Latin Name: </strong><input id="input-latin-name" type="text" name="latin_name" value="" placeholder="Latin name"></p>
+                <p><strong>Planting Season: </strong><input id="input-season" type="text" name="season" value="" placeholder="Growing season"></p>
+                <p><strong>Light Requirements: </strong><input id="input-light" type="text" name="light" value="" placeholder="Light requirements"></p>
+                <p><strong>Water Requirements: </strong><input id="input-water" type="text" name="water" value="" placeholder="Water requirements"></p>
+                <p><strong>Germination Days: </strong><input id="input-germ-days" type="integer" name="germ_days" value="" placeholder=0></p>
+
+                <input id="submit-button" type="submit" name="submit" value="Add a Plant" class="submit">
+            </form>
+        </div>
+
+        <!-- PLANTS DISPLAY -->
+        <div id="plants-container">
+
+        </div>
+       
+    </body>
+</html>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210714161948) do
+ActiveRecord::Schema.define(version: 20210714181256) do
 
   create_table "plants", force: :cascade do |t|
     t.string  "name"
@@ -23,18 +23,16 @@ ActiveRecord::Schema.define(version: 20210714161948) do
   end
 
   create_table "pods", force: :cascade do |t|
-    t.integer  "total_count"
-    t.integer  "germ_count"
-    t.string   "season"
-    t.string   "location"
-    t.string   "additives"
-    t.string   "soil"
-    t.string   "water"
-    t.integer  "pkg_year"
-    t.integer  "sow_year"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "plant_id"
+    t.integer "total_count"
+    t.integer "germ_count"
+    t.string  "season"
+    t.string  "location"
+    t.string  "additives"
+    t.string  "soil"
+    t.string  "water"
+    t.integer "pkg_year"
+    t.integer "sow_year"
+    t.integer "plant_id"
     t.index ["plant_id"], name: "index_pods_on_plant_id"
   end
 
