@@ -1,0 +1,103 @@
+body {
+    background-color: #F2F2F2;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+a:visited {
+    font-style: bold;
+}
+
+.plant-card {
+    /* background-color: paleturquoise; */
+    padding: 0px 10px 10px 10px;
+    margin: 5px;
+}
+
+.pod-card {
+    /* background-color: paleturquoise; */
+    padding: 0px 10px 10px 10px;
+    margin: 5px;
+}
+
+.main {
+    width: 90%;
+    /* background: #ccc; */
+    margin: 0 auto;
+}
+
+.row {
+    clear: both;
+}
+
+.row:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+}
+
+.column {
+    width: 32%;
+    float: left;
+    /* background: lightskyblue; */
+    margin-left: 2%;
+}
+
+.column:first-child {
+    margin-left: 0%;
+} /* this is the part that makes the separation into individual columns instead of stacking them */
+
+#new-pod-container {
+    /* background-color: palegreen; */
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#update-pod-container {
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* IN CASE EACH INDIVIDUAL COLUMN NEEDS STYLING 
+
+#pods-container {
+    
+}
+
+#center-graphic {
+    
+}
+
+#plant-info-container {
+
+} */
+
+/* ARTIFACT / PLANTS ON SEPARATE PAGE / MAY USE LATER
+#plants-container {
+    background-color: palegreen;
+    width: 60%;
+    padding: 20px;
+    margin-left: 50px;
+} 
+
+#new-plant-container {
+    background-color: palegreen;
+    width: 60%;
+    padding: 20px;
+    margin-left: 50px;
+} */

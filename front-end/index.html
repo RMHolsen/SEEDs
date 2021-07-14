@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SEEDs</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="pods.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="plants.js"></script>
+        <!-- Script tag may also go into the body of the html file -->
+        <!-- Note: js files loaded on the same page cannot overlap variable declarations. can't have two test functions in js files on the same page -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="test-container">
+            
+        </div>
+
+        <!-- NEW PLANT FORM -->
+        <div id="new-pod-container">
+            <form id="create-pod-form">
+                <p><select id="plants" name="plants">
+                    <option value="3">Crystal Apple Cucumber</option>
+                    <option value="7">Cilantro</option>
+                    <option value="8">Mullein</option>
+                    <option value="9">Sweet Marjoram</option>
+                    <option value="11">Borage</option>
+                </select></p>
+                
+                <p><strong>Total Planted: </strong> <input id="input-total-count" type="integer" name="" value="" placeholder="1-6"></p>
+                <p><strong>Total Germinated: </strong><input id="input-germ-count" type="integer" name="" value="" placeholder="0-6"></p>
+                <p><strong>Season Started: </strong><input id="input-season" type="text" name="" value="" placeholder="Season started"></p>
+                <p><strong>Location Started: </strong><input id="input-location" type="integer" name="" value="" placeholder="Location started"></p>
+                <p><strong>Additives Used: </strong><input id="input-additives" type="text" name="" value="" placeholder="Additives used"></p>
+                <p><strong>Water Rate: </strong><input id="input-water" type="integer" name="" value="" placeholder="Water rate"></p>
+                <p><strong>Year Packaged: </strong><input id="input-pkg-year" type="integer" name="" value="" placeholder="2020"></p>
+                <p><strong>Year Sown: </strong><input id="input-sow-year" type="integer" name="" value="" placeholder="2021"></p>
+                
+                <input id="submit-button" type="submit" name="submit" value="Add a Plant Pod" class="submit">
+            </form>
+        </div>
+        <!-- UPDATE PLANT FORM -->
+        <div id="update-pod-container" style="display: none;">
+            <form id="update-pod-form">
+                <p><select id="update-plants" name="update-plants">
+                    <option value="3">Crystal Apple Cucumber</option>
+                    <option value="7">Cilantro</option>
+                    <option value="8">Mullein</option>
+                    <option value="9">Sweet Marjoram</option>
+                    <option value="11">Borage</option>
+                </select></p>
+                
+                <p><strong>Total Planted: </strong> <input id="update-total-count" type="integer" name="" value="" placeholder="1-6"></p>
+                <p><strong>Total Germinated: </strong><input id="update-germ-count" type="integer" name="" value="" placeholder="0-6"></p>
+                <p><strong>Season Started: </strong><input id="update-season" type="text" name="" value="" placeholder="Season started"></p>
+                <p><strong>Location Started: </strong><input id="update-location" type="integer" name="" value="" placeholder="Location started"></p>
+                <p><strong>Additives Used: </strong><input id="update-additives" type="text" name="" value="" placeholder="Additives used"></p>
+                <p><strong>Water Rate: </strong><input id="update-water" type="integer" name="" value="" placeholder="Water rate"></p>
+                <p><strong>Year Packaged: </strong><input id="update-pkg-year" type="integer" name="" value="" placeholder="2020"></p>
+                <p><strong>Year Sown: </strong><input id="update-sow-year" type="integer" name="" value="" placeholder="2021"></p>
+
+                <input id="update-button" type="submit" name="submit" value="Update Pod" class="submit">
+            </form>
+        </div>
+
+        <!-- PLANTS DISPLAY -->
+    <div class="main">
+        <div class="row">
+            <div class="column" id="pods-container">
+
+            </div>
+            <div class="column" id="center-graphic">
+               <p>GRAPHIC HERE</p>
+            </div>
+            <div class="column"  id="plant-info-container">
+               
+            </div>
+        </div>
+    </div>
+       
+    </body>
+</html>
