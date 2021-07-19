@@ -86,12 +86,16 @@ const renderPlant = (plant) => {
     settings.innerHTML = `Season: ${plant.season}<br> Light: ${plant.light}<br> Water: ${plant.water}<br> Days to Germination: ${plant.germ_days}`;
     plantCard.appendChild(settings);
 
+    const notes = document.createElement('p');
+    notes.innerHTML = `<b>Notes:</b> ${plant.notes}`;
+    plantCard.appendChild(notes);
+
     const clearButton = document.createElement('button');
     clearButton.innerHTML = 'Clear Info'
     clearButton.addEventListener('click', function() {
         clearInfo(`plant_${plant.id}`);
     })
-    plantCard.appendChild(clearButton);
+    plantCard.appendChild(clearButton); 
 
     body.appendChild(plantCard);
 }

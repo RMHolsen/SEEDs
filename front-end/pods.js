@@ -19,7 +19,7 @@ const clearPodForm = () => {
     const totalCount = document.getElementById('input-total-count');
     totalCount.value = '';
     const germCount = document.getElementById('input-germ-count');
-    germCount.value = '';
+    if (germCount !== null) {germCount.value = ''};
     const season = document.getElementById('input-season');
     season.value = '';
     const location = document.getElementById('input-location');

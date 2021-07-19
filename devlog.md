@@ -4,3 +4,11 @@ Did not kick up same error with the secrets.yml file needed? (see 23 June 2021 i
 Added serializers
 Unusual errors kicking up?? Can't find routes??
 It was the config/application.rb file. The rack-cors gem needed that extra bit of code to make the proper connections. REMEMBER THIS IN FUTURE.
+
+## 15 July 2021
+Absolutely nothing of structural substance, I just mucked around with some graphics. 
+
+## 19 July 2021
+Cleared out some cruft and rearranged some plant IDs around the drop-down plant select form in the index page
+Added field to show percentages germinated on Pod card
+Added notes field to Plant details display

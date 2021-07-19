@@ -43,7 +43,7 @@ function renderPods(pods) {
 }
 
 function addPodCard(pod) {
-    
+
     const body = document.querySelector('#pods-container');
     // define the body as the div with the right id "pods-container"
 
@@ -57,6 +57,10 @@ function addPodCard(pod) {
     podCard.appendChild(nameH2);
     // setting up the name   
 
+    // const titleH4 = document.createElement('h4');
+    // titleH4.innerHTML = `${pod.attributes.title}`
+    // podCard.appendChild(titleH4);
+
     const total = document.createElement('p');
     total.innerHTML = `Total Planted: ${pod.attributes.total_count}`
     podCard.appendChild(total);
@@ -64,10 +68,10 @@ function addPodCard(pod) {
 
     if (pod.attributes.germ_count > 0) {
         const germ = document.createElement('p');
-        germ.innerHTML = `Total Germinated: ${pod.attributes.germ_count}` 
+        const germ_percent = ((pod.attributes.germ_count / pod.attributes.total_count) * 100).toFixed(0);
+        germ.innerHTML = `Total Germinated: ${pod.attributes.germ_count}<br> Success Rate: ${germ_percent}%`
         podCard.appendChild(germ)
     }
-    // germ count should go here once edit functions are added/looked into/learned
 
     const settings = document.createElement('p');
     settings.innerHTML = `Season: ${pod.attributes.season}<br> Planting Location: ${pod.attributes.location}<br> Additives Used: ${pod.attributes.additives}<br> Water: ${pod.attributes.water}<br> Packaged in: ${pod.attributes.pkg_year}<br> Planted in: ${pod.attributes.sow_year}`;
@@ -93,6 +97,7 @@ function addPodCard(pod) {
         renderUpdateForm(podToEdit);
     })
     podCard.appendChild(editPod);
+
 
     /* OPEN PLANT DETAILS IN NEW WINDOW CODE
     const plantLink = document.createElement('a');
