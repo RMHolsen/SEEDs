@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 const clearPodForm = () => {
-    //clear the fucking form
+    //clear the form
+    // see reset in index.js 
     const plant = document.getElementById('plants');
     plant.value = plant.firstChild; 
     const totalCount = document.getElementById('input-total-count');
@@ -105,6 +106,8 @@ const patchRequestFetch = (pod, total_count, germ_count, season, location, addit
         console.log(pod);
         window.location.reload();
         return false;
+        // no take this out, too much server load, do not need
+        // this was meant to clear the form, for the record
     })
 }
 

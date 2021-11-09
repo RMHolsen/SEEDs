@@ -1,5 +1,6 @@
 class Pod < ApplicationRecord
     belongs_to :plant 
+    # validates total_count numericality { >0 }
 
     def pod_count_valid?
         if self.total_count <= 0

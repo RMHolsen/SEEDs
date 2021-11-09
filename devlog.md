@@ -12,3 +12,10 @@ Absolutely nothing of structural substance, I just mucked around with some graph
 Cleared out some cruft and rearranged some plant IDs around the drop-down plant select form in the index page
 Added field to show percentages germinated on Pod card
 Added notes field to Plant details display
+
+## 21 July 2021
+TO DO: Fix your validations! 
+TO DO: Debug the clear info thing, 
+
+## 9 November 2021
+Standardized Project Notes, added ReadMe, cleaned up a few notes

@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     createPodForm.addEventListener('submit', (e) => createFormHandler(e));
     // Listen for a submit event and if one happens, do the thing in the createFormHandler function
-
+    console.log("A");
     fetchPods();
+    console.log("B");
     // includes renderPods function
     // fetches the json data from the backend (controller file) and displays it
 })
@@ -25,12 +26,26 @@ document.addEventListener('DOMContentLoaded', function() {
 let url = 'http://localhost:3000/pods'
 
 function fetchPods() {
-    fetch(url)
-    .then(res => res.json())
+    console.log("C");
+    fetch(url) // returns Promise object (yes it sounds weird)
+    .then(res => res.json()) // also returns a Promise object [PENDING FULFILLED REJECTED are your options]
     .then(function(json) {
+        console.log("D");
         renderPods(json)
     })
+    console.log("E - outside the fetch request" );
     //.catch() for errors, undeveloped as yet
+}
+
+const fetchStones = () => {
+    fetch(board)
+    .then(res => res.json())
+    .then(function(json) {
+        playLivingStones(json);
+    })
+    .catch(function() {
+        deadStones()
+    })
 }
 
 function renderPods(pods) {
@@ -98,6 +113,23 @@ function addPodCard(pod) {
     })
     podCard.appendChild(editPod);
 
+    // LiveCode Like exercise
+    const likePod = document.createElement('button');
+    likePod.style.marginLeft = '5px';
+    likePod.innerHTML = 'Like!';
+    // creating button (has not been added to podCard yet)
+    const likes = document.createElement('p');
+    likes.innerHTML = 0
+    podCard.appendChild(likes);
+    // creating likes
+
+    likePod.addEventListener('click', function() {
+        likes.innerHTML = parseInt(likes.innerHTML) + 1;
+        // converting to integer and adding a like 
+    })
+    podCard.appendChild(likePod);
+
+ 
 
     /* OPEN PLANT DETAILS IN NEW WINDOW CODE
     const plantLink = document.createElement('a');
@@ -114,7 +146,7 @@ function addPodCard(pod) {
 
     body.appendChild(podCard);
     // append the newly created pod card to the pods-container div
-    }
+}
 
 function createFormHandler(e) {
     e.preventDefault();
@@ -124,6 +156,7 @@ function createFormHandler(e) {
     const newSeason = document.querySelector('#input-season').value 
     const newLocation = document.querySelector('#input-location').value
     const newAdditives = document.querySelector('#input-additives').value
+    // soil goes here
     const newWater = document.querySelector('#input-water').value
     const pkgYear = document.querySelector('#input-pkg-year').value
     const sowYear = document.querySelector('#input-sow-year').value
@@ -150,5 +183,6 @@ function postRequestFetch(total_count, season, location, additives, water, pkg_y
         addPodCard(newPod);
         let newPodJs = new Pod(newPod.id, newPod.attributes);
         // and empty out the data fields, write a function for that later
+        document.querySelector("#create-pod-form").reset();
     })
 }

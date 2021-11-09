@@ -103,6 +103,7 @@ const renderPlant = (plant) => {
 const clearInfo = (id) => {
     const body = document.getElementById(id) ;
     body.innerHTML = "";
+    // debug this, find a way to replace.
 }
 
 /*

@@ -36,6 +36,6 @@ class PodsController < ApplicationController
     private
 
     def pod_params 
-        params.require(:pod).permit(:total_count, :germ_count, :season, :location, :additives, :water, :pkg_year, :sow_year, :plant_id)
+        params.require(:pod).permit(:total_count, :germ_count, :season, :location, :additives, :soil, :water, :pkg_year, :sow_year, :plant_id)
     end 
 end 

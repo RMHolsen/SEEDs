@@ -1,4 +1,4 @@
-# SEEDs
+# README
 
 Yes that is a Trigun reference, in case you were wondering. 
 
