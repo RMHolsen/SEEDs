@@ -104,6 +104,7 @@ const clearInfo = (id) => {
     const body = document.getElementById(id) ;
     body.innerHTML = "";
     // debug this, find a way to replace.
+    // does this need to be plant_id? I wouldn't think so.
 }
 
 /*

@@ -19,3 +19,6 @@ TO DO: Debug the clear info thing,
 
 ## 9 November 2021
 Standardized Project Notes, added ReadMe, cleaned up a few notes
+
+## 2 January 2021
+Commented out the ABCDE from the project review -- leaving it in to remind myself of the order of operations around fetch requests

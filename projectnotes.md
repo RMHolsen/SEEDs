@@ -34,7 +34,7 @@ t.string :notes
 # t.integer :how_many (Kept here as an artifact but no longer needed since this will now be general plant information rather than specific to the garden being grown.)
 
 ## Bugs
-The "clear info" box is doing something weird. You need to do a bit of clicking to replicate the behavior, but. Something weird going on there. 
+The "clear info" box is doing something weird. You need to do a bit of clicking to replicate the behavior, but. Something weird going on there. (While you're doing that, you can also find a less server heavy way to clear the pod box around lines 109-110 of pods.js.)
 Fix validations
 
 ## Notes
