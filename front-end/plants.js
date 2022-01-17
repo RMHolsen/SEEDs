@@ -101,9 +101,12 @@ const renderPlant = (plant) => {
 }
 
 const clearInfo = (id) => {
-    const body = document.getElementById(id) ;
-    body.innerHTML = "";
+    const body = document.querySelector("#plant-info-container");
+    const plant = document.getElementById(id);
+    body.removeChild(plant);
+    // document.removeChild(body);
     // debug this, find a way to replace.
+    // does this need to be plant_id? I wouldn't think so.
 }
 
 /*

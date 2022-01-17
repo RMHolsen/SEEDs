@@ -16,24 +16,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     createPodForm.addEventListener('submit', (e) => createFormHandler(e));
     // Listen for a submit event and if one happens, do the thing in the createFormHandler function
-    console.log("A");
+    // console.log("A");
     fetchPods();
-    console.log("B");
+    // console.log("B");
     // includes renderPods function
     // fetches the json data from the backend (controller file) and displays it
 })
 
 let url = 'http://localhost:3000/pods'
 
+
 function fetchPods() {
-    console.log("C");
+    // console.log("C");
     fetch(url) // returns Promise object (yes it sounds weird)
     .then(res => res.json()) // also returns a Promise object [PENDING FULFILLED REJECTED are your options]
     .then(function(json) {
-        console.log("D");
+        //console.log("D");
         renderPods(json)
     })
-    console.log("E - outside the fetch request" );
+    // console.log("E - outside the fetch request" );
     //.catch() for errors, undeveloped as yet
 }
 
@@ -56,6 +57,7 @@ function renderPods(pods) {
         console.log(pod);
     })
 }
+
 
 function addPodCard(pod) {
 
