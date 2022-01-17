@@ -115,36 +115,7 @@ function addPodCard(pod) {
     })
     podCard.appendChild(editPod);
 
-    // LiveCode Like exercise
-    const likePod = document.createElement('button');
-    likePod.style.marginLeft = '5px';
-    likePod.innerHTML = 'Like!';
-    // creating button (has not been added to podCard yet)
-    const likes = document.createElement('p');
-    likes.innerHTML = 0
-    podCard.appendChild(likes);
-    // creating likes
-
-    likePod.addEventListener('click', function() {
-        likes.innerHTML = parseInt(likes.innerHTML) + 1;
-        // converting to integer and adding a like 
-    })
-    podCard.appendChild(likePod);
-
- 
-
-    /* OPEN PLANT DETAILS IN NEW WINDOW CODE
-    const plantLink = document.createElement('a');
-    // create a link element
-    //plantLink.setAttribute('class', 'plant-link')
-    //plantLink.setAttribute('href', `http://localhost:3000/plants/${pod.attributes.plant.id}`);
-    plantLink.setAttribute('href', `plants.html#${pod.attributes.plant.id}`)
-    // set the href to the plants show page, targeting the plant id
-    plantLink.setAttribute('target', 'blank');
-    // cause it to open in a new window
-    plantLink.innerHTML = 'View Plant Details';
-    podCard.appendChild(plantLink);
-    // add it to the pod card */
+    // LiveCode Like exercise gets imported here
 
     body.appendChild(podCard);
     // append the newly created pod card to the pods-container div

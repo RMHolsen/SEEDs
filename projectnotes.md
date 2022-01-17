@@ -1,4 +1,9 @@
 ## To Do
+-- debug current bugs list
+-- ON SEPARATE BRANCH start setting up either gardens or users or years, some way to keep the data separate for different attempts
+-- actually, if you want to do years, this could be solved by simply adding some sort of sort method for 'year sown' and making it a clickable/sortable 
+-- in which case also then you need to add a clear pod button to the front and then maybe a show all pods for this year button
+-- that could be WAY more useful than setting it up by users, at least for such a small scope
 
 ## Stretch Goals
 -- add date stamp to pod records. this will be more complicated than it looks: created at is easy and may be demonstrable in project assessment. updated at will feed only the date to an array which will then be filtered for unique dates (so multiple updates on the same day don't get registered; plants don't change that fast unless groundhogs are eating them) and spat back into the general record array. don't forget to add this to the javascript object
@@ -34,8 +39,8 @@ t.string :notes
 # t.integer :how_many (Kept here as an artifact but no longer needed since this will now be general plant information rather than specific to the garden being grown.)
 
 ## Bugs
-The "clear info" box is doing something weird. You need to do a bit of clicking to replicate the behavior, but. Something weird going on there. (While you're doing that, you can also find a less server heavy way to clear the pod box around lines 109-110 of pods.js.)
-Fix validations
+Find a less server heavy way to clear the pod box around lines 109-110 of pods.js.
+Fix validations (I don't even remember where the validations were broken.)
 
 ## Notes
 

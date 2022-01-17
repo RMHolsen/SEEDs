@@ -9,59 +9,6 @@ const testPlants = () => {
     body.appendChild(test);
 }
 
-/* NOW IT'S ARTIFACT CODE FOR RENDERING PLANTS ON A SEPARATE PAGE
-UNCOMMENT OUT TO RENDER PLANTS ON A SEPARATE PAGE 
-
-document.addEventListener('DOMContentLoaded', function() { 
-    // testPlants();
-    // test
-    fetchPlants();
-    // fetch request, which includes render function
-})
-
-const fetchPlants = () => {
-    let url = `http://localhost:3000/plants/`
-    // plants.all index
-
-    fetch(url)
-    .then(res => res.json())
-    .then(function(json) {
-        //console.log(json);
-        renderPlants(json);
-        // fetch and render the json
-    })
-} 
-
-const renderPlants = (plants) => {
-    plants.data.forEach(plant => {
-        const body = document.querySelector("#plants-container")
-        // set the body equal to the plants container only, not the full document body
-
-        const plantCard = document.createElement('div');
-        plantCard.className = "plant-card"
-        plantCard.setAttribute('data-id', plant.id)
-        plantCard.setAttribute('id', plant.id)
-        // create a new div with the class plant-card and the data-id and id = the plant object id
-
-        const nameH2 = document.createElement('h2');
-        nameH2.innerHTML = plant.attributes.name;
-        plantCard.appendChild(nameH2);
-        // add the name to the plant card as an h2
-
-        const latinName = document.createElement('p');
-        latinName.innerHTML = `Latin Name: ${plant.attributes.latin_name}`;
-        plantCard.appendChild(latinName);
-        // add the latin name to the plant card as a p
-
-        const settings = document.createElement('p');
-        settings.innerHTML = `Season: ${plant.attributes.season}<br> Light: ${plant.attributes.light}<br> Water: ${plant.attributes.water}<br> Days to Germination: ${plant.attributes.germ_days}`;
-        plantCard.appendChild(settings);
-        // add the settings (water, light, etc) to the plant card as a p with br's
-
-        body.appendChild(plantCard);
-        // add the newly created plant card to the plants-container div
-    })
-} */
 
 /* RENDER A SINGLE PLANT ON THE RIGHT HAND SIDE */
 const renderPlant = (plant) => {
@@ -104,12 +51,9 @@ const clearInfo = (id) => {
     const body = document.querySelector("#plant-info-container");
     const plant = document.getElementById(id);
     body.removeChild(plant);
-    // document.removeChild(body);
-    // debug this, find a way to replace.
-    // does this need to be plant_id? I wouldn't think so.
 }
 
-/*
+/* IN CASE YOU NEED TO HAVE A WAY TO CREATE NEW PLANTS? 
 
 class Plant {
     constructor(id, plantsAttributes) {

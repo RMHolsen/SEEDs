@@ -25,3 +25,6 @@ Commented out the ABCDE from the project review -- leaving it in to remind mysel
 
 ## 16 January 2021
 Debugged the 'remove plant info' button. RemoveChild is an actual thing, self, you don't need to just clear out the HTML.
+Merged debug branch
+Cleaned up some cruft from various places, separated add-likes livecode challenge to storage file
+Added goals in To Do
