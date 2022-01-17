@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let url = 'http://localhost:3000/pods'
 
+
 function fetchPods() {
     // console.log("C");
     fetch(url) // returns Promise object (yes it sounds weird)
@@ -56,6 +57,7 @@ function renderPods(pods) {
         console.log(pod);
     })
 }
+
 
 function addPodCard(pod) {
 

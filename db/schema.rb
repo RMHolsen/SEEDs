@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210714181256) do
+ActiveRecord::Schema.define(version: 20210917155828) do
 
   create_table "plants", force: :cascade do |t|
     t.string  "name"
@@ -34,6 +34,11 @@ ActiveRecord::Schema.define(version: 20210714181256) do
     t.integer "sow_year"
     t.integer "plant_id"
     t.index ["plant_id"], name: "index_pods_on_plant_id"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
