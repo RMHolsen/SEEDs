@@ -8,34 +8,6 @@ const testPods = () => {
     body.appendChild(test);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    clearPodForm();
-})
-
-const clearPodForm = () => {
-    //clear the form
-    // see reset in index.js 
-    // ... wait what does this mean. do I not need to ... what. 
-    const plant = document.getElementById('plants');
-    plant.value = plant.firstChild; 
-    const totalCount = document.getElementById('input-total-count');
-    totalCount.value = '';
-    const germCount = document.getElementById('input-germ-count');
-    if (germCount !== null) {germCount.value = ''};
-    const season = document.getElementById('input-season');
-    season.value = '';
-    const location = document.getElementById('input-location');
-    location.value = '';
-    const additives = document.getElementById('input-additives');
-    additives.value = '';
-    const water = document.getElementById('input-water');
-    water.value = '';
-    const pkgYear = document.getElementById('input-pkg-year');
-    pkgYear.value = '';
-    const sowYear = document.getElementById('input-sow-year');
-    sowYear.value = '';
-}
-
 const renderUpdateForm = (pod) => {
     const newForm = document.getElementById('new-pod-container');
     newForm.style.display = 'none';
@@ -112,6 +84,18 @@ const patchRequestFetch = (pod, total_count, germ_count, season, location, addit
     })
 }
 
+function podsButtons() {
+    // TESTING. RECONFIGURE AFTER YOU'VE RESTRUCTURED THE WHOLE LAYOUT
+    body = document.getElementById("new-pod-container");
+    const renderAllPods = document.createElement('button');
+    renderAllPods.innerHTML = "Render All Pods";
+    renderAllPods.addEventListener('click', function() {
+        console.log("Mr. Hammond, the phones are working.")
+        fetchPods();
+    });
+    body.appendChild(renderAllPods);
+    // render all pods works except it adds everything to the bottom, so it just duplicates if it's not cleared
+}
 
 class Pod { 
     constructor(id, podAttributes) {

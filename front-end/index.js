@@ -11,20 +11,19 @@ const test = () => {
 
 document.addEventListener('DOMContentLoaded', function() {
 // when all the content in the document is loaded, do these things: 
-
     const createPodForm = document.querySelector('#create-pod-form')
-
     createPodForm.addEventListener('submit', (e) => createFormHandler(e));
     // Listen for a submit event and if one happens, do the thing in the createFormHandler function
+    // note that the form is rendered in the html document, as is the update form; the handlers are in JS
+
     // console.log("A");
-    fetchPods();
-    // console.log("B");
-    // includes renderPods function
+    fetchPods(); // includes render pods function
     // fetches the json data from the backend (controller file) and displays it
+    // console.log("B");
+    podsButtons();
 })
 
 let url = 'http://localhost:3000/pods'
-
 
 function fetchPods() {
     // console.log("C");
@@ -137,7 +136,6 @@ function createFormHandler(e) {
     const newSeason = document.querySelector('#input-season').value 
     const newLocation = document.querySelector('#input-location').value
     const newAdditives = document.querySelector('#input-additives').value
-    // soil goes here
     const newWater = document.querySelector('#input-water').value
     const pkgYear = document.querySelector('#input-pkg-year').value
     const sowYear = document.querySelector('#input-sow-year').value
@@ -160,7 +158,6 @@ function postRequestFetch(total_count, season, location, additives, water, pkg_y
     .then(pod => {
         console.log(pod);
         const newPod = pod.data;
-
         addPodCard(newPod);
         let newPodJs = new Pod(newPod.id, newPod.attributes);
         // and empty out the data fields, write a function for that later

@@ -36,3 +36,5 @@ Removed leftover cruft from a blog post whoops
 Removed title attribute from renderPods function; there is no title attribute in the pods anyway
 Added a rough outline of a 'clear pod' button, confirmed via testing 
 Added a rough outline of a 'delete pod' button and then commented out; that's for later
+Cleared some cruft from pods.js
+Added 'render all pods' button, verified clumsy functionality

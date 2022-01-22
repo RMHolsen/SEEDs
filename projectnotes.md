@@ -1,11 +1,11 @@
 ## To Do
 -- debug current bugs list
--- ON SEPARATE BRANCH start setting up either gardens or users or years, some way to keep the data separate for different attempts
--- actually, if you want to do years, this could be solved by simply adding some sort of sort method for 'year sown' and making it a clickable/sortable 
--- in which case also then you need to add a clear pod button to the front and then maybe a show all pods for this year button
--- that could be WAY more useful than setting it up by users, at least for such a small scope
--- maybe add a 'close pod' and 'view all pods' button as well as a delete button because eventually that's going to make for a very long page
+-- examine user login private settings functionality, but that's going to end up being a whole rebuild from the ground up
+-- add method to sort by year sown and render
+-- restructure 'render all pods' button so it clears the div before re-rendering, if possible
+-- add button to render all pods from a given year, per above sort method
 -- move the edit pod form, which also will mean you'll need to edit the part in pods renderUpdateForm
+-- actually the whole layout needs to be moved if we're going to have "render this year" "render that year" etc buttons. ugh. 
 
 ## Stretch Goals
 -- add date stamp to pod records. this will be more complicated than it looks: created at is easy and may be demonstrable in project assessment. updated at will feed only the date to an array which will then be filtered for unique dates (so multiple updates on the same day don't get registered; plants don't change that fast unless groundhogs are eating them) and spat back into the general record array. don't forget to add this to the javascript object
