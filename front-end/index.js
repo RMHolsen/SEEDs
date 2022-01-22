@@ -38,26 +38,15 @@ function fetchPods() {
     //.catch() for errors, undeveloped as yet
 }
 
-const fetchStones = () => {
-    fetch(board)
-    .then(res => res.json())
-    .then(function(json) {
-        playLivingStones(json);
-    })
-    .catch(function() {
-        deadStones()
-    })
-}
-
 function renderPods(pods) {
     pods.data.forEach(pod => {
         let newPod = new Pod(pod.id, pod.attributes);
+        // why do we have this variable declaration here if we're not going to use it in the function?
         // because of fast-json we get a nested object, so we need to separate the id from the attributes
         addPodCard(pod);
         console.log(pod);
     })
 }
-
 
 function addPodCard(pod) {
 
@@ -67,16 +56,14 @@ function addPodCard(pod) {
     const podCard = document.createElement('div');
     podCard.className = "pod-card"
     podCard.setAttribute('data-id', pod.id)
-    // create a new div with the class "pod-card" (for the pod, implicit)
+    // create a new div with the class "pod-card" (for the pod, implicit) and the attribute data-id (why do we need data-id again?)
+    podCard.setAttribute('id', `pod_${pod.id}`)
+    // I think this should only be needed for removing the pod from view, but we'll see
 
     const nameH2 = document.createElement('h2');
     nameH2.innerHTML = `${pod.attributes.plant.name}`
     podCard.appendChild(nameH2);
     // setting up the name   
-
-    // const titleH4 = document.createElement('h4');
-    // titleH4.innerHTML = `${pod.attributes.title}`
-    // podCard.appendChild(titleH4);
 
     const total = document.createElement('p');
     total.innerHTML = `Total Planted: ${pod.attributes.total_count}`
@@ -117,6 +104,27 @@ function addPodCard(pod) {
 
     // LiveCode Like exercise gets imported here
 
+    const clearPod = document.createElement('button');
+    clearPod.style.marginLeft = '5px';
+    clearPod.innerHTML = 'Clear Pod'
+    clearPod.addEventListener('click', function() {
+        const podToClear = document.getElementById(`pod_${pod.id}`);
+        // referring to how we set up an html element id with the pod
+        // NOT referring to the data-id
+        // why? I don't know why
+        const body = document.querySelector('#pods-container');
+        body.removeChild(podToClear)
+    })
+    podCard.appendChild(clearPod);
+    // clear the pod from the page but NOT DELETE 
+
+    // const deletePod = document.createElement('button');
+    // deletePod.style.marginLeft = '5px';
+    // deletePod.innerHTML = 'Delete Pod';
+    // podCard.appendChild(deletePod);
+    // the actual delete button 
+    // maybe don't keep this, but it's here without an action if we want it
+
     body.appendChild(podCard);
     // append the newly created pod card to the pods-container div
 }
@@ -156,6 +164,7 @@ function postRequestFetch(total_count, season, location, additives, water, pkg_y
         addPodCard(newPod);
         let newPodJs = new Pod(newPod.id, newPod.attributes);
         // and empty out the data fields, write a function for that later
+        // not sure why newPodJs ... needs to be here? at all?
         document.querySelector("#create-pod-form").reset();
     })
 }

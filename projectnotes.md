@@ -5,6 +5,7 @@
 -- in which case also then you need to add a clear pod button to the front and then maybe a show all pods for this year button
 -- that could be WAY more useful than setting it up by users, at least for such a small scope
 -- maybe add a 'close pod' and 'view all pods' button as well as a delete button because eventually that's going to make for a very long page
+-- move the edit pod form, which also will mean you'll need to edit the part in pods renderUpdateForm
 
 ## Stretch Goals
 -- add date stamp to pod records. this will be more complicated than it looks: created at is easy and may be demonstrable in project assessment. updated at will feed only the date to an array which will then be filtered for unique dates (so multiple updates on the same day don't get registered; plants don't change that fast unless groundhogs are eating them) and spat back into the general record array. don't forget to add this to the javascript object

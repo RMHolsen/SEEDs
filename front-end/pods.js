@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const clearPodForm = () => {
     //clear the form
     // see reset in index.js 
+    // ... wait what does this mean. do I not need to ... what. 
     const plant = document.getElementById('plants');
     plant.value = plant.firstChild; 
     const totalCount = document.getElementById('input-total-count');

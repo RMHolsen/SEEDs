@@ -20,11 +20,19 @@ TO DO: Debug the clear info thing,
 ## 9 November 2021
 Standardized Project Notes, added ReadMe, cleaned up a few notes
 
-## 2 January 2021
+## 2 January 2022
 Commented out the ABCDE from the project review -- leaving it in to remind myself of the order of operations around fetch requests
 
-## 16 January 2021
+## 16 January 2022
 Debugged the 'remove plant info' button. RemoveChild is an actual thing, self, you don't need to just clear out the HTML.
 Merged debug branch
 Cleaned up some cruft from various places, separated add-likes livecode challenge to storage file
 Added goals in To Do
+
+## 22 January 2022
+Hahaha fixed dates in DevLog whoops
+Fussing with buttons on a new branch
+Removed leftover cruft from a blog post whoops
+Removed title attribute from renderPods function; there is no title attribute in the pods anyway
+Added a rough outline of a 'clear pod' button, confirmed via testing 
+Added a rough outline of a 'delete pod' button and then commented out; that's for later
